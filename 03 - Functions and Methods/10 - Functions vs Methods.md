@@ -1,10 +1,12 @@
+# Functions vs. Methods
+
 JavaScript, unlike Ruby, makes a clear distinction between functions and methods. This section will cover some of the characteristics of each and how to recognize one from the other.
 
 #### What is a Function?
 
 The best definition of a **function** is "a chunk of code that does stuff". If that's not good enough for you, then maybe you'd prefer the definition from MDN:
 
->Generally speaking, a function is a "subprogram" that can be called by code external (or internal in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the function body.  Values can be passed to a function, and the function can return a value. [Link to source](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)
+> Generally speaking, a function is a "subprogram" that can be called by code external (or internal in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the function body.  Values can be passed to a function, and the function can return a value. [Link to source](https://developer.mozilla.org/en/JavaScript/Reference/Functions_and_function_scope)
 
 Access to functions is determined by the scope in which they were defined. If you define a function in the global scope, it will be available throughout your program. If you define it within an object or another function, it will only be available from within the context of that object or function.
 

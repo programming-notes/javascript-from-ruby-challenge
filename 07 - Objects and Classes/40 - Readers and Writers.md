@@ -1,3 +1,5 @@
+# Readers and Writers
+
 In Ruby Intro, we noted that one of the most common requirements of a class is that the outside world be able to read and possibly write to its instance variables.  Since instance variables are only accessible by instance methods by default, and not the outside world, we have to define **reader** (getter) and **writer** (setter) methods which expose an object's instance variables.
 
 This lesson will show a direct comparison between reader and writer methods in Ruby and how we would write them in JavaScript.
@@ -70,7 +72,7 @@ Creating a reader method in JavaScript requires defining a function that returns
 var Person = function(fullName, age) {
   var fullName  = fullName;
   var age       = age;
-  
+
   // Don't forget about the return keyword!
   this.fullName = function() { return fullName };
 }
@@ -86,7 +88,7 @@ You may be saying to yourself, "that seems like an awful lot of code to just ret
 var Person = function(fullName, age) {
   var fullName  = fullName;
   var age       = age;
-  
+
   this.fullName = fullName;
 };
 
@@ -133,8 +135,8 @@ In JavaScript, a writer function looks quite similar:
 var Person = function(fullName, age) {
   var fullName  = fullName;
   var age       = age;
-    
-  this.fullName = function(newName) { 
+
+  this.fullName = function(newName) {
     fullName = newName;
   };
 };
@@ -149,14 +151,14 @@ If we want to check that it really works, we'll need a reader method as well.  I
 var Person = function(fullName, age) {
   var fullName  = fullName;
   var age       = age;
-  
+
   // Getter function
   this.getName = function() {
     return fullName;
   };
-  
+
   // Setter function
-  this.setName  = function(newName) { 
+  this.setName  = function(newName) {
     fullName = newName;
   };
 };
@@ -190,7 +192,7 @@ Since properties are not variables, we can't reference them like local variables
 var Person = function(fullName, age) {
   this.fullName = fullName;
   this.age      = age;
-  
+
   this.growUp   = function() {
     this.age += 1;
   };

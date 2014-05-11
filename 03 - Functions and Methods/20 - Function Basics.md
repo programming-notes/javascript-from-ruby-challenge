@@ -1,3 +1,5 @@
+# Function Basics
+
 Whenever we have an action we want to perform like adding two numbers or parsing a string, we will define that action in a function.
 
 There are three basic components to every function in JavaScript:
@@ -23,7 +25,7 @@ Thus, invoking the function defined above would be written as `foo()`. Run this 
 
 ```javascript
 var sayHello = function() { 'hello'; };
-                          
+
 sayHello();
 ```
 
@@ -48,11 +50,11 @@ var add = function(x, y) { return x + y; };
 Though we could also add any other statements we want to the function body. Copy this code into the browser console:
 
 ```javascript
-var add = function(num1, num2) { 
+var add = function(num1, num2) {
   var sum = num1 + num2;
   return sum;
 };
-                
+
 add(5,9);
 ```
 

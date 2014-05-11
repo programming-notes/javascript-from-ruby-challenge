@@ -1,4 +1,6 @@
-Now that we know how to write conditional statements, we can use them to modify the flow of the program between different branches.  
+# If Statements
+
+Now that we know how to write conditional statements, we can use them to modify the flow of the program between different branches.
 
 The basic branching structure in JavaScript, as in Ruby, is the `if` branch.  The most basic `if` branch allows the program to run a particular set of code (or a branch) when a condition is true.  Here are some `if` branches:
 
@@ -16,7 +18,7 @@ if (num1 === 5) {
 }
 ```
 
-Using the browser console experiment with these statements by assigning different values to the variables in the conditional statement to make it true or false. Notice that when the conditional statement is false there is no output because the flow of the program does not go into the body of the `if` branch. 
+Using the browser console experiment with these statements by assigning different values to the variables in the conditional statement to make it true or false. Notice that when the conditional statement is false there is no output because the flow of the program does not go into the body of the `if` branch.
 
 JavaScript does not have an `unless` statement. Sorry. If you want to use the opposite of an `if` statement, just use the `!` modifier: `if (! condition) { code }`.
 
@@ -36,11 +38,11 @@ if (average <= 90) {
 } else if (average <= 80) {
   var grade = "B";
 } else {
-  var grade = "F"; 
+  var grade = "F";
 }
 ```
 
-As you see in the code above, the `else` branch must be the last branch in the if structure.  An `else` branch has no conditional statement and it will only be executed if all the other branches evaluate to `false`.  The `else` is often used for a default value or a fall through to make sure a value is assigned. 
+As you see in the code above, the `else` branch must be the last branch in the if structure.  An `else` branch has no conditional statement and it will only be executed if all the other branches evaluate to `false`.  The `else` is often used for a default value or a fall through to make sure a value is assigned.
 
 ### References
 

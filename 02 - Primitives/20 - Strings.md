@@ -1,3 +1,5 @@
+# Strings
+
 A string is a collection of characters, just like in Ruby. These can be letters, symbols or numbers.  Here are some strings in JavaScript:
 
 ```javascript
@@ -9,8 +11,8 @@ name + ' ' + "Smith"
 "23" + '15'
 ```
 
-When working with numbers in strings, the numbers are treated as symbols, so adding two numeric strings works like adding two non-numeric strings in that it just concatenates the symbols.  In Ruby, the `*` symbol can also be used with strings, but not so in JavaScript. Try it: 
- 
+When working with numbers in strings, the numbers are treated as symbols, so adding two numeric strings works like adding two non-numeric strings in that it just concatenates the symbols.  In Ruby, the `*` symbol can also be used with strings, but not so in JavaScript. Try it:
+
 ```javascript
 "Hello" * 4;
 ```
@@ -35,7 +37,7 @@ But will the special characters work within single-quoted strings? JavaScript is
 'Even the backslash ( \\ )is escaped.'
 ```
 
-There are lots of methods available for the String object which you can read about on the  [MDN page](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String). Let's look at a few: 
+There are lots of methods available for the String object which you can read about on the  [MDN page](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String). Let's look at a few:
 
 ```javascript
 "I like to code".indexOf('i');

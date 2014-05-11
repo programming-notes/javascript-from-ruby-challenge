@@ -1,3 +1,5 @@
+# Array Operations
+
 Every `Array` object in JavaScript supports the same set of methods and properties.  It doesn't matter what kind of objects are in the array.
 
 Mozilla's Developer Network provides this useful description for arrays:
@@ -59,9 +61,9 @@ Hint: you can tell it's a property and not a method because it doesn't take a `(
 This is like asking the array, "How big are you?"
 
 ```javascript
-var months = ["January", "February", "March", 
-              "April", "May", "June", 
-              "July", "August", "September", 
+var months = ["January", "February", "March",
+              "April", "May", "June",
+              "July", "August", "September",
               "October", "November", "December"];
 
 months.length;
@@ -192,7 +194,7 @@ Here's `Array.unshift()`:
 ```javascript
 var array = [1,2,3];
 array.unshift("cats");
-array; 
+array;
 // => ["cats", 1, 2, 3]
 
 var array = [];
@@ -212,7 +214,7 @@ firstElement; // => 1
 
 ### Concatenating Arrays
 
-Like `Strings`, you can concatenate `Arrays` in JavaScript using the `concat()` method. 
+Like `Strings`, you can concatenate `Arrays` in JavaScript using the `concat()` method.
 
 ```
 var array1 = [1,2,3];

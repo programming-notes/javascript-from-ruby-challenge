@@ -1,3 +1,5 @@
+# Inheritance
+
 We already noted that JavaScript is prototype-based, not class-based.  To get a sense of what this means, take a look at this [chart comparing class-based and prototype-based languages](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Details_of_the_Object_Model#Summary_of_differences).
 
 Everything in JavaScript is an object.  Each object is connected to it's prototype object, which is akin to a parent class in Ruby.
@@ -62,7 +64,7 @@ var Flower = function(commonName, latinName) {
   // Assign the local variables
   var commonName  = commonName;
   var latinName   = latinName;
-  
+
   // Define some getter methods
   this.getCommonName  = function() { return commonName };
   this.getLatinName   = function() { return latinName  };
@@ -123,7 +125,7 @@ f.class.superclass # => Object
 b.class.superclass # => Flower
 ```
 
-The equivalent feature in JavaScript is the **prototype chain**, though there is no singular way to set up inheritance structures.  Instead, there are all kinds of techniques and design patterns&mdash;some better than others&mdash;that utilize the prototype feature of JavaScript to construct an architecture of inheritance.  
+The equivalent feature in JavaScript is the **prototype chain**, though there is no singular way to set up inheritance structures.  Instead, there are all kinds of techniques and design patterns&mdash;some better than others&mdash;that utilize the prototype feature of JavaScript to construct an architecture of inheritance.
 
 There is a great deal of debate as to which design pattern is the best, so instead of taking sides, we will show two of the more popular way.  [The inheritance page](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain) on the Mozilla Developer Network provides a good general overview of the ways that inheritance.
 
@@ -148,7 +150,7 @@ var Orchid = function(name, isEpiphyte) {
 Orchid.prototype = new Flower("Orchidaceae");
 ```
 
-So, what is going on here?  Well, we have two constructor functions: `Flower()`, which forms the base of our inheritance tree, and `Orchid()`.  
+So, what is going on here?  Well, we have two constructor functions: `Flower()`, which forms the base of our inheritance tree, and `Orchid()`.
 
 `Flower` takes one argument and stores it in a local variable `family`.  It also defines three properties, one of which is a getter method `getFamily`.
 
@@ -188,11 +190,11 @@ var Flower = function(family) {
 
 var Orchid = function(name, isEpiphyte) {
   var name = name;
-  
+
   var orchid        = Object.create(new Flower("Orchidaceae"));
   orchid.getName    = function() { return name };
   orchid.isEpiphyte = isEpiphyte;
-  
+
   return orchid;
 };
 ```
@@ -203,14 +205,14 @@ The `Flower` constructor is the same as it was before.  The `Orchid` constructor
 var Orchid = function(name, isEpiphyte) {
   // Assign a local variable to the value of the name argument
   var name = name;
-  
+
   // Create a new object with an instance of Flower for
   // its prototype object, and store it in a local variable
   var orchid = Object.create(new Flower("Orchidaceae"));
 
   // Define the method getName for the orchid object
   orchid.getName = function() { return name };
-  
+
   // Add the isEpiphyte property to the orchid object
   orchid.isEpiphyte = isEpiphyte;
 

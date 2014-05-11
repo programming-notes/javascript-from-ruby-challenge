@@ -1,3 +1,5 @@
+# Built-in Methods
+
 JavaScript comes with a library of built-in methods both for *core* JavaScript and *client-side*.  In this lesson, we'll be focusing on the methods for *core* JavaScript, which includes the global objects `Number`, `Array`, `Boolean`, and `String`, to name a few.  Some of these methods you will recognize from Ruby, and others will be new.
 
 Note: besides the built-in methods for global objects, JavaScript provides a long list of methods for *client-side* functionality. In a web client (a browser), you will want to do things like retrieve the current url, or home in on a specific element in the DOM. There is a lot to explore in this realm, but that is beyond the scope of this lesson.
@@ -48,7 +50,7 @@ myString.concat(" and sushi.").toUpperCase();
 ```
 
 ### Syntactic Sugar
- 
+
 Ruby is famous for its readable code. JavaScript, not as much. While Ruby allows for all sorts of "syntactic sugar", JavaScript is usually a bit stricter about requiring statements to be written out with precise formatting: semicolons at the ends of statements, parens for holding arguments and invoking functions, etc.
 
 However, JavaScript does let us write arithmetic operations in a familiar way, without having to explicitly write out the method calls as `.methodName()`. Just like in Ruby, the standard operations are also methods:

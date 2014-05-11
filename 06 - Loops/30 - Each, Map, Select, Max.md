@@ -1,8 +1,10 @@
+# Each, Map, Select, Max
+
 We've already learned that JavaScript does not provide looping methods in the same way that Ruby does. The question, then, is "how would we reproduce Ruby-like looping methods in JavaScript?".
 
-This last lesson provides some examples of JavaScript implementations for the Ruby Array methods `#each`, `#map`, `#select`, and `#max`.  
+This last lesson provides some examples of JavaScript implementations for the Ruby Array methods `#each`, `#map`, `#select`, and `#max`.
 
-In the interest of simplicity, the new implementations will be global functions, not methods of the JavaScript `Array` global object.  They will not be an *exact* match of the Ruby method. 
+In the interest of simplicity, the new implementations will be global functions, not methods of the JavaScript `Array` global object.  They will not be an *exact* match of the Ruby method.
 
 See if you can figure out how each works, and then tinker with it on your own in the browser console.
 
@@ -25,7 +27,7 @@ What is the purpose of the `func` parameter?  In Ruby, you might call `Array#eac
 [1,2,3,4].each { |n| puts n }
 ```
 
-The `{ |n| puts n }` is the block of code passed to `each`.  JavaScript does not have a separate object for blocks, so we instead use a **callback function**: a function called as an argument from another function.  The parameter `func` stands in for a function which will be called with the argument `array[i]`.  
+The `{ |n| puts n }` is the block of code passed to `each`.  JavaScript does not have a separate object for blocks, so we instead use a **callback function**: a function called as an argument from another function.  The parameter `func` stands in for a function which will be called with the argument `array[i]`.
 
 Here is an example of how you could use this function:
 
@@ -44,11 +46,11 @@ Ruby's `Array#map` method will pass each element in an array to a block, and the
 ```javascript
 var map = function(array, func) {
   var results = [];
-  
+
   for (var i=0; i < array.length; i++) {
     results.push(func(array[i]));
   }
-  
+
   return results;
 };
 ```
@@ -75,13 +77,13 @@ Note the use of the `return` keyword in the argument function.  If left out, eve
 ```javascript
 var select = function(array, func) {
   var results = [];
-  
+
   for (var i=0; i < array.length; i++) {
     if (func(array[i])) {
       results.push(array[i]);
     }
   }
-  
+
   return results;
 };
 ```
@@ -109,13 +111,13 @@ Finally, `Array#max`: the simplest of the four.  No need to pass a callback func
 ```javascript
 var max = function(array) {
   var biggest = array[0];
-  
+
   for (var i=0; i < array.length; i++) {
     if (array[i] > biggest) {
       biggest = array[i];
     }
   }
-  
+
   return biggest;
 };
 ```

@@ -1,3 +1,5 @@
+# Conditions and Logic
+
 So far we have been working with the simplest programming structure (or program flow) which is called `Sequential Programming`.  All of the statements we have written execute in the order they appear in the program (or in the method).  Often in programming, we need to be able to change which statements are executed based on some additional value.  This programming structure is called the `Selection Structure` but is often referred to as `Branching`.  In order to make a selection between two separate program flows, we need to be able to create conditional statements.
 
 These lessons will cover the basics of branching in JavaScript, highlighting areas where it overlaps or differs from Ruby.
@@ -17,19 +19,19 @@ We can create `conditional statements` using the comparison operators `<`, `>` ,
 3 != 7;
 ```
 
-Type each line above into the browser console and verify that `true` or `false` is returned.  These operators should look familiar to the ones you've used in Ruby, with one difference: the `===` to determine equality. The equality operator is THREE `=` signs, not two.  JavaScript does provide a `==` comparison operator as well, but it performs type conversion before comparing and thus is not testing for *true* equality.  As a rule of thumb, always use the `===` operator in JavaScript unless you know that you want `==`. 
+Type each line above into the browser console and verify that `true` or `false` is returned.  These operators should look familiar to the ones you've used in Ruby, with one difference: the `===` to determine equality. The equality operator is THREE `=` signs, not two.  JavaScript does provide a `==` comparison operator as well, but it performs type conversion before comparing and thus is not testing for *true* equality.  As a rule of thumb, always use the `===` operator in JavaScript unless you know that you want `==`.
 
 ### Logical Operators
 
-In addition to the comparison operators, we can use `logical operators` to combine together conditional statements to  create more complex conditional statements.  The logical operators are `AND` represented as `&&`, `OR` represented as `||` and `NOT` represented by `!`.  The `&&` and `||` operators combine together two conditional statements and return a new conditional statement that evaluates to `true` or `false` based on the originals.  
+In addition to the comparison operators, we can use `logical operators` to combine together conditional statements to  create more complex conditional statements.  The logical operators are `AND` represented as `&&`, `OR` represented as `||` and `NOT` represented by `!`.  The `&&` and `||` operators combine together two conditional statements and return a new conditional statement that evaluates to `true` or `false` based on the originals.
 
 All of these are the same as in Ruby, but just to refresh your memory here are some examples:
 
 ```javascript
-5 > 2 && 4 < 8; 
+5 > 2 && 4 < 8;
 // => true (both conditional statements evaluate to true)
 
-1 > 0 && 3 > 9; 
+1 > 0 && 3 > 9;
 // => false (the second conditional evaluates to false, thus the pair evaluates to false)
 
 2 > 5 && 4 < 7;
@@ -42,7 +44,7 @@ All of these are the same as in Ruby, but just to refresh your memory here are s
 5 > 2 || 4 < 8;
 // => true (both conditionals evaluate to true)
 
-1 > 0 || 3 > 9; 
+1 > 0 || 3 > 9;
 // => true (the first conditional evaluates to true, thus the pair evaluates to true)
 
 2 > 5 || 4 < 7;
@@ -52,11 +54,11 @@ All of these are the same as in Ruby, but just to refresh your memory here are s
 // => false (both conditionals evaluate to false)
 ```
 
-Notice that the only way an `&&` is true is if both original statements are true, and the only way an `||` is false is if both original statements are false. 
+Notice that the only way an `&&` is true is if both original statements are true, and the only way an `||` is false is if both original statements are false.
 
 The third logical operator is `NOT`, represented as `!`.  The `!` operator changes the truth value of any conditional statement.  So if the conditional statement `x < 3` is true, then the statement `! ( x < 3)` is false.
 
-For each of the following conditional statements, use the given input values to determine the truth value by hand, then type it into the browser console to verify.  
+For each of the following conditional statements, use the given input values to determine the truth value by hand, then type it into the browser console to verify.
 
 ```javascript
 var x = 112;

@@ -1,3 +1,5 @@
+# Looping Basics
+
 The idea of looping is common to all programming languages: doing something over and over again.  Each language provides their own syntax for creating loops, and JavaScript is quite different from Ruby in this regard.
 
 Ruby provides all sorts of looping methods: `each`, `map`, `inject`, `times`, and so on. JavaScript, on the other hand, uses two keywords for all looping operations: `for` and `while`. These two keywords form the foundation for all looping in JavaScript. It might not seem like much right now, but you can get very creative with these to create the right loop for the job.
@@ -5,7 +7,7 @@ Ruby provides all sorts of looping methods: `each`, `map`, `inject`, `times`, an
 ### Reviewing Loops
 
 If you think about it, all loops can be boiled down to two basic types:
- 
+
 1. Loops that perform a certain action *a set number of times*
 2. Loops that perform a certain action *until a specified condition is met*
 
@@ -46,9 +48,9 @@ for (var i = 0; i < n; i++) {
 }
 ```
 
-Let's break that down: 
+Let's break that down:
 
-1. We start with the keyword `for`, which identifies this statement as a `for` loop and tells JavaScript to look for the parameters that govern how the loop will operate. 
+1. We start with the keyword `for`, which identifies this statement as a `for` loop and tells JavaScript to look for the parameters that govern how the loop will operate.
 2. Within the parentheses, JavaScript expects three instructions to set up our loop. The first is the `var i = 0`, which assigns the starting value for our *incrementor*, in this case represented by the variable `i`. An incrementor is used to keep track of how many loops have been executed.
 3. The second statement in the parens &mdash; `i < n` &mdash; is a conditional statement that is executed before each iteration in the loop. If the statement evaluates to `true`, the next iteration is run; if `false`, the loop will stop. In this case, the variable `n` is just standing in for a number.
 4. The last statement &mdash; `i++` &mdash; identifies the action to be taken at the end of each loop. In this case, we are incrementing the variable `i` by one each time. `i` will be equal to `0` for the first iteration of the loop, `1` for the second iteration, `2` for the third, and so on.

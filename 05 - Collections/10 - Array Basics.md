@@ -1,3 +1,5 @@
+# Array Basics
+
 Arrays are the most fundamental kind of collection.  JavaScipt, like Ruby, allows us to work with Arrays. We'll go over some of the differences between how the two languages implement Arrays and which methods they provide.
 
 ### Creating Arrays
@@ -38,9 +40,9 @@ var dummy = "foobar";
 Let's take a look at that array of months from above.  Paste the following into the browser console.
 
 ```javascript
-var months = ["January", "February", "March", 
-              "April", "May", "June", 
-		          "July", "August", "September", 
+var months = ["January", "February", "March",
+              "April", "May", "June",
+		          "July", "August", "September",
 		          "October", "November", "December"];
 ```
 

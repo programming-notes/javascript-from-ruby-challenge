@@ -1,10 +1,12 @@
+# Variables and Properties
+
 We've done three things so far:
 
 1. Defined constructors and objects
 2. Defined our own `Die` constructor with a single property, the function `roll()`
 3. Extended our `Die` constructor to allow for multiple rolls using the `this` keyword
 
-When we defined objects we said they were a collection of data and functions that act on that data, but we haven't really explored the `this` keyword in relation to the `var` keyword when it comes to storing data about an object.  
+When we defined objects we said they were a collection of data and functions that act on that data, but we haven't really explored the `this` keyword in relation to the `var` keyword when it comes to storing data about an object.
 
 All of the object properties we've defined have been public &mdash; they can be called on an object and will return some data or execute some code.  If this were Ruby, we would have only covered the methods of an object.  What about things like instance variables, which hold private data stored within an object?
 
@@ -13,9 +15,9 @@ All of the object properties we've defined have been public &mdash; they can be 
 To begin, let's rebuild our `Die` constructor again so we can create dice with any number of sides, not just six.
 
 ```javascript
-var Die = function(numSides) { 
+var Die = function(numSides) {
   var sides = numSides;
-  
+
   this.roll = function() {
     return Math.floor(1 + Math.random() * sides);
   };
@@ -54,7 +56,7 @@ class Die
   def initialize(num_sides)
     @sides = num_sides
   end
-  
+
   def roll
     1 + rand(@sides)
   end
@@ -72,8 +74,8 @@ Here is an example:
 ```javascript
 var foo = "goobers";
 
-var Bar = function() { 
-  var baz = "zoomzapzippy"; 
+var Bar = function() {
+  var baz = "zoomzapzippy";
 };
 
 console.log(foo); // => "goobers"
@@ -95,12 +97,12 @@ Back to our `Die` constructor, now with commentary about the varaible scope:
 // The parameter ~numSides~ allows the Die constructor
 // to accept the number of sides as an argument
 var Die = function(numSides) {
-   
+
   // ~sides~ is a local variable within the scope of the
   // Die constructor function that gets assigned to the
   // argument passed in when a new object is created.
   var sides = numSides;
-  
+
   // Other variables and properties of the Die function
   // have access to the ~sides~ variable since they are
   // defined within the same scope

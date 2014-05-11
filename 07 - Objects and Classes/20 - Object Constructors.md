@@ -1,3 +1,5 @@
+# Object Constructors
+
 The previous lesson explained a bit about how JavaScript has no notion of classes.  To simulate the way that classes work, we can use a variety of techniques.  One of the common techniques is to use **constructor** functions.  There are lots of other ways to mimic class structures, but most of them are beyond the scope of this lesson.  [Douglas Crawford](http://javascript.crockford.com/) and the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/JavaScript/) provide some good reading materials on the other techniques.
 
 #### What is a constructor function?
@@ -72,12 +74,12 @@ end
 Defining a `Die` constructor function in JavaScript:
 
 ```javascript
-var Die = function() { 
+var Die = function() {
   this.roll = function() {
     // Math.random() generates a float, so we use
     // Math.floor() to round down to the nearest integer
     return Math.floor(1 + Math.random()*6);
-  }; 
+  };
 };
 ```
 
@@ -108,7 +110,7 @@ This prints out `10` random integers between `1` and `6`, or `10` rolls of a six
 Let's dissect the definition of our `Die` object constructor.
 
 ```javascript
-// this says: 
+// this says:
 // "We're defining a new constructor function called Die"
 var Die = function() {
   // this says:
@@ -132,11 +134,11 @@ What if we wanted to collect the results of multiple rolls into an `Array`?  We 
 ```javascript
 var multipleRolls = function(die, numRolls) {
   var rolls = [];
-  
+
   for (var i=0; i < numRolls; i++) {
     rolls.push(die.roll());
   }
-  
+
   return rolls;
 };
 
@@ -152,18 +154,18 @@ This code is "inside out."  A `Die` object should know how to roll itself multip
 We do this by defining a new property for the `Die` constructor called `multipleRolls` and assign it to our function above.
 
 ```javascript
-var Die = function() { 
+var Die = function() {
   this.roll = function() {
     return Math.floor(1 + Math.random()*6);
   };
-  
+
   this.multipleRolls = function(numRolls) {
     var rolls = [];
-  
+
     for (var i=0; i < numRolls; i++) {
       rolls.push(this.roll());
     }
-  
+
     return rolls;
   };
 };

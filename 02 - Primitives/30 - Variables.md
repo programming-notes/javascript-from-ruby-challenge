@@ -1,3 +1,5 @@
+# Variables
+
 When we work with data in JavaScript, we often want to be able to store information.  A variable is used to store a value and can then be used later in the code to retrieve or modify this value.  In JavaScript, unlike Ruby, we use the `var` keyword to prefix variable definition.
 
 ```javascript
@@ -44,7 +46,7 @@ num = num * 4;
 result = result + 1;
 ```
 
-This is so common that JavaScript, like Ruby, has a set of Combined Assignment Operators that allow us to write this with less code.  The examples below perform the same operations as the previous code, we just don't have to write the name of the variable on both sides of the assignment operator. 
+This is so common that JavaScript, like Ruby, has a set of Combined Assignment Operators that allow us to write this with less code.  The examples below perform the same operations as the previous code, we just don't have to write the name of the variable on both sides of the assignment operator.
 
 ```javascript
 num *= 4;

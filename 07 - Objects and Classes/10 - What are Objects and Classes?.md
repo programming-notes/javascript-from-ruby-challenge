@@ -1,3 +1,5 @@
+# What are Objects and Classes?
+
 Before we get into Objects and Classes in JavaScript, let's review the fundamental concepts.  Then we will be better prepared to discuss instantiation and inheritance in the context of JavaScript and how it compares to Ruby.
 
 ### Objects
@@ -7,7 +9,7 @@ Objects in JavaScript are lists of *properties* that either store data about the
 We already looked at object literals, but here is a reminder of what they look like:
 
 ```javascript
-var country = { 
+var country = {
   population: 281931,
   anthem: "We Are So Great",
   taxRate: 20,
@@ -54,7 +56,7 @@ JavaScript is also an object-based language, though it employs a different **obj
 
 Read the [full article](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Details_of_the_Object_Model) for a more complete explanatin of JavaScript's object model.
 
-You may encounter developers who refer to classes in JavaScript, i.e. "the String class".  While technically inaccurate, it is not a wholly wrong way to refer to the structure of JavaScript.  The notion of objects inheriting from prototypes is a hierarchy system similar to the class structure in Ruby, and so the word "class" is thrown around to mean roughly the same thing.  
+You may encounter developers who refer to classes in JavaScript, i.e. "the String class".  While technically inaccurate, it is not a wholly wrong way to refer to the structure of JavaScript.  The notion of objects inheriting from prototypes is a hierarchy system similar to the class structure in Ruby, and so the word "class" is thrown around to mean roughly the same thing.
 
 There's no need to get confused when someone refers to "the Array class" in JavaScript.  Classes are just a programming concept, after all.  They are not some physical certainty that can be pointed to.  It is just a shorter and easier way of saying "the Array global object".
 
