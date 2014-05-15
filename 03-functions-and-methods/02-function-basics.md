@@ -70,7 +70,7 @@ Codecademy has a good [set of exercises](http://www.codecademy.com/courses/funct
 
 When we define a function, we can provide an optional list of *parameters* (also called *arguments*).  This is a list of values that will be available to use within the function body.
 
-Each parameter is actually a local variable that is only available within the body of the function.  The concept of where a variable is defined and where it is available to use is referred to as the variable's <span class="keyword">scope</span>. As in Ruby, there are several levels of scope in JavaScript, and parameters are defined as having local scope.
+Each parameter is actually a local variable that is only available within the body of the function.  The concept of where a variable is defined and where it is available to use is referred to as the variable's _scope_. As in Ruby, there are several levels of scope in JavaScript, and parameters are defined as having local scope.
 
 When we call (invoke) a function, we pass arguments or values which are assigned to each parameter in the list. For example, consider the method definition:
 

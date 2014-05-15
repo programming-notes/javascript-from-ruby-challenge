@@ -116,7 +116,7 @@ desserts.indexOf("steak") > -1;
 
 JavaScript implements `join()` and `split()` in much the same way as Ruby.
 
-`Array.join()` takes a `String` called a `separator` as its input and returns a `String` formed by converting each element of the `Array` to a `String`, and then combining them into a single string separated by the `separator`.  That might sound confusing, but an example will make it pretty clear:
+`Array.join()` takes a `String` called a _separator_ as its input and returns a `String` formed by converting each element of the `Array` to a `String`, and then combining them into a single string separated by the separator.  That might sound confusing, but an example will make it pretty clear:
 
 ```javascript
 [1,2,3].join(",");
@@ -138,7 +138,7 @@ var foo = false;
 // => "1,2,3"
 ```
 
-`String` has the inverse method, `String.split()`, which takes a `separator` as its input and returns an `Array` whose elements are the parts of the string separated by the `separator`.  Let's look:
+`String` has the inverse method, `String.split()`, which takes a separator as its input and returns an `Array` whose elements are the parts of the string separated by the separator.  Let's look:
 
 ```javascript
 "1,2,3".split(',');
@@ -214,7 +214,7 @@ firstElement; // => 1
 
 ### Concatenating Arrays
 
-Like `Strings`, you can concatenate `Arrays` in JavaScript using the `concat()` method.
+Like strings, you can concatenate arrays in JavaScript using the `concat()` method.
 
 ```
 var array1 = [1,2,3];

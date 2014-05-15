@@ -169,7 +169,7 @@ nancy.setName('Tom Sawyer');
 nancy.getName(); // => 'Tom Sawyer'
 ```
 
-There we go!  By defining reader (getter) and writer (setter) functions like this, we can let the outside world interact with our object's internal data (i.e., its <span class="keyword"instance variables</span>).
+There we go!  By defining reader (getter) and writer (setter) functions like this, we can let the outside world interact with our object's internal data (i.e., its _instance variables).
 
 ### Variables vs. Properties Redux
 

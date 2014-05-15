@@ -17,7 +17,7 @@ num.toString();
 These are all examples of **instance methods**, which means they are called on instances of objects (in this case objects of type `String` and `Number`). The general syntax to call an instance method is:
 
 ```javascript
-someObject.methodName(argument list);
+someObject.methodName(argumentOne, argumentTwo);
 ```
 
 Note that we still have to affix the parens `()` even if the method is called without any arguments. Without the parens, JavaScript interprets your method as a *property* instead.

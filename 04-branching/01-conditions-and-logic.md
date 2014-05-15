@@ -1,14 +1,14 @@
 # Conditions and Logic
 
-So far we have been working with the simplest programming structure (or program flow) which is called `Sequential Programming`.  All of the statements we have written execute in the order they appear in the program (or in the method).  Often in programming, we need to be able to change which statements are executed based on some additional value.  This programming structure is called the `Selection Structure` but is often referred to as `Branching`.  In order to make a selection between two separate program flows, we need to be able to create conditional statements.
+So far we have been working with the simplest programming structure (or program flow) which is called _Sequential Programming_.  All of the statements we have written execute in the order they appear in the program (or in the method).  Often in programming, we need to be able to change which statements are executed based on some additional value.  This programming structure is called the _Selection Structure_ but is often referred to as _Branching_.  In order to make a selection between two separate program flows, we need to be able to create conditional statements.
 
 These lessons will cover the basics of branching in JavaScript, highlighting areas where it overlaps or differs from Ruby.
 
 ### Conditional Statements
 
-A `conditional statement` is just a statement that can be evaluated to `true` or `false`, where `true` and `false` are not the strings "true" and "false" but are special values of the global object `Boolean`.
+A **conditional statement** is just a statement that can be evaluated to `true` or `false`, where `true` and `false` are not the strings "true" and "false" but are special values of the global object `Boolean`.
 
-We can create `conditional statements` using the comparison operators `<`, `>` , `<=`, `>=` , `===`, and `!=` as follows:
+We can create conditional statements using the comparison operators `<`, `>` , `<=`, `>=` , `===`, and `!=` as follows:
 
 ```javascript
 5 > 4;
@@ -23,7 +23,7 @@ Type each line above into the browser console and verify that `true` or `false` 
 
 ### Logical Operators
 
-In addition to the comparison operators, we can use `logical operators` to combine together conditional statements to  create more complex conditional statements.  The logical operators are `AND` represented as `&&`, `OR` represented as `||` and `NOT` represented by `!`.  The `&&` and `||` operators combine together two conditional statements and return a new conditional statement that evaluates to `true` or `false` based on the originals.
+In addition to the comparison operators, we can use **logical operators** to combine together conditional statements to  create more complex conditional statements.  The logical operators are `AND` represented as `&&`, `OR` represented as `||` and `NOT` represented by `!`.  The `&&` and `||` operators combine together two conditional statements and return a new conditional statement that evaluates to `true` or `false` based on the originals.
 
 All of these are the same as in Ruby, but just to refresh your memory here are some examples:
 

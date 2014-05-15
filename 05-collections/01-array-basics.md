@@ -42,8 +42,8 @@ Let's take a look at that array of months from above.  Paste the following into 
 ```javascript
 var months = ["January", "February", "March",
               "April", "May", "June",
-		          "July", "August", "September",
-		          "October", "November", "December"];
+		      "July", "August", "September",
+		      "October", "November", "December"];
 ```
 
 (Yes, you can split up array declarations across multiple lines in JavaScript, so long as the line ends with a comma.)
