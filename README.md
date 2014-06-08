@@ -1,8 +1,16 @@
 # From Ruby to JavaScript
 
-In this challenge, you will learn the basics of JavaScript by building on concepts from Ruby.
+In this challenge, you will learn the basics of JavaScript by building on
+concepts from Ruby.
 
-The files are organized into numbered chapters and pages. Move through them in order or jump around from place to place - whichever is better for you.
+The files are organized into numbered chapters and pages. Move through them in
+order or jump around from place to place - whichever is better for you.
+
+Be sure to practice what you've learned by completing the drills (linked to at
+the end of each section). Clone the [javascipt-drils repo](../../../javascript-drills)
+and follow along as you complete each section.  Be sure to read
+javascript-drills README. It includes instructions for running the drills
+locally using Node.
 
 Have fun!
 
