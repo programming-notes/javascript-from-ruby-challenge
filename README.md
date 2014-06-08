@@ -28,10 +28,10 @@ Have fun!
 - [02-if-statements.md](04-branching/02-if-statements.md)
 
 ### Collections
-- [01-array-basics.md](04-branching/01-array-basics.md)
-- [02-array-operations.md](04-branching/02-array-operations.md)
-- [03-object-literals.md](04-branching/03-object-literals.md)
-- [10-exercises.md](04-branching/10-exercises.md)
+- [01-array-basics.md](05-collections/01-array-basics.md)
+- [02-array-operations.md](05-collections/02-array-operations.md)
+- [03-object-literals.md](05-collections/03-object-literals.md)
+- [10-exercises.md](05-collections/10-exercises.md)
 
 ### Loops
 - [01-looping-basics.md](06-loops/01-looping-basics.md)
