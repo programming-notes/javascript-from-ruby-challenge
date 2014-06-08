@@ -15,13 +15,12 @@ Have fun!
 - [01-numbers.md](02-primitives/01-numbers.md)
 - [02-strings.md](02-primitives/02-strings.md)
 - [03-variables.md](02-primitives/03-variables.md)
-- [10-exercises.md](02-primitives/10-exercises.md)
 
 ### Functions and Methods
 - [01-functions-vs-methods.md](03-functions-and-methods/01-functions-vs-methods.md)
 - [02-function-basics.md](03-functions-and-methods/02-function-basics.md)
 - [03-built-in-methods.md](03-functions-and-methods/03-built-in-methods.md)
-- [10-exercises.md](03-functions-and-methods/10-exercises.md)
+- [Exercises](../../../javascript-drills#functions)
 
 ### Branching
 - [01-conditions-and-logic.md](04-branching/01-conditions-and-logic.md)
@@ -31,13 +30,13 @@ Have fun!
 - [01-array-basics.md](05-collections/01-array-basics.md)
 - [02-array-operations.md](05-collections/02-array-operations.md)
 - [03-object-literals.md](05-collections/03-object-literals.md)
-- [10-exercises.md](05-collections/10-exercises.md)
+- [Exercises](../../../javascript-drills#collections)
 
 ### Loops
 - [01-looping-basics.md](06-loops/01-looping-basics.md)
 - [02-looping-through-arrays.md](06-loops/02-looping-through-arrays.md)
 - [03-each-map-select-max.md](06-loops/03-each-map-select-max.md)
-- [10-exercises.md](06-loops/10-exercises.md)
+- [Exercises](../../../javascript-drills#loops)
 
 ### Objects and Classes
 - [01-what-are-objects-and-classes.md](07-objects-and-classes/01-what-are-objects-and-classes.md)
@@ -45,7 +44,7 @@ Have fun!
 - [03-variables-and-properties.md](07-objects-and-classes/03-variables-and-properties.md)
 - [04-readers-and-writers.md](07-objects-and-classes/04-readers-and-writers.md)
 - [05-inheritance.md](07-objects-and-classes/05-inheritance.md)
-- [10-exercises.md](07-objects-and-classes/10-exercises.md)
+- [Exercises](../../../javascript-drills#objects--classes)
 
 ---
 
