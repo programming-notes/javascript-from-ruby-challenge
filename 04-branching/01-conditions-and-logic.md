@@ -15,7 +15,7 @@ We can create conditional statements using the comparison operators `<`, `>` , `
 3 <= 3;
 'cat' > 'dog';
 'cat' === 'CAT';
-(2+1) >= 7;
+(2 + 1) >= 7;
 3 != 7;
 ```
 
