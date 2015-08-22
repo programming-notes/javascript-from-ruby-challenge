@@ -194,7 +194,7 @@ The `Flower` constructor is the same as it was before.  The `Orchid` constructor
 
 ```javascript
 function Orchid(name, isEpiphyte) {
-  //
+  // Calls the parent constructor on the newly instantiated object
   Flower.call(this, "Orchidaceae");
 
   // Define the method getName for the newly instantiated object
