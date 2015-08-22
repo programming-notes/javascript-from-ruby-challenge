@@ -27,19 +27,9 @@ var factorial = function(n) {
 */
 
 // begin:solution
-var factorial = function(n) {
-  if (n === 0) { 
-    return 1 
-  } else {
-    var result = 1;
-    
-    for (var i=n; i > 0; i--) {
-      result = result * i;
-    }
-    
-    return result;
-  }
-};
+function factorial(n) {
+  return n <= 1 ? 1 : factorial(n - 1);
+}
 // end:solution
 
 // begin:spec
@@ -47,15 +37,15 @@ describe("factorial", function() {
   it("returns 1 with 0 as an argument", function() {
     expect(factorial(0)).toEqual(1);
   });
-  
+
   it("returns 1 with 1 as an argument", function() {
     expect(factorial(1)).toEqual(1);
   });
-  
+
   it("calculates 10!", function() {
     expect(factorial(10)).toEqual(3628800);
   });
-  
+
   it("calculates 20!", function() {
     expect(factorial(20)).toEqual(2432902008176640000);
   });
