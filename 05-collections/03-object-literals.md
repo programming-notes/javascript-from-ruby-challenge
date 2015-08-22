@@ -75,7 +75,7 @@ book.title;
 
 In this way, we can extend objects with new properties whenever needed.  If we try to access a property that has not been defined yet, it will return `undefined`.  Nice and simple.
 
-The first example from above could also have been written as follows:
+It's important to realize the first example above could also have been written as follows:
 
 ```javascript
 var person = {};
