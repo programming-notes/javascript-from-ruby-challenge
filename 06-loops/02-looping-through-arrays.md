@@ -19,16 +19,28 @@ console.log(dogs[4]);
 But that is pretty bulky and ugly. We can use a `for` loop to do the same thing, but in less code:
 
 ```javascript
-var i;
+var index, count;
 
-for (i = 0; i < dogs.length; i++) {
-  console.log(dogs[i]);
+for (index = 0, count = dogs.length; index < count; index++) {
+  console.log(dogs[index]);
 }
 ```
 
 Code inside a block (`{ like this }`) can see variables defined outside itself, which means we can use variables to determine what to print. In this case, we are indexing into an array referenced by the variable `dogs`.
 
 Since our `for` loop defines an incrementor `i` which starts at `0` (just like the index on an array, if you noticed), we can use that same variable to access elements within the array: `dogs[i]`. Thus, each iteration of the loop will print the subsequent element in the array.
+
+Alternatively, we could use a while loop:
+
+```javascript
+var index = 0
+var count = dogs.length;
+
+while (index < count) {
+  console.log(dogs[index++]);
+}
+```
+
 
 Try this out in the browser console for yourself.
 

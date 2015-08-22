@@ -108,9 +108,11 @@ Run it in JavaScript:
 
 ```javascript
 var die = new Die();
+var index = 0;
 
-for (var i = 0; i < 10; i++) {
+while (index < 10) {
   console.log(die.roll());
+  index += 1;
 }
 ```
 
@@ -145,8 +147,9 @@ What if we wanted to collect the results of multiple rolls into an `Array`?  We 
 ```javascript
 var multipleRolls = function(die, numRolls) {
   var rolls = [];
+  var index = 0;
 
-  for (var i = 0; i < numRolls; i++) {
+  while (index < numRolls) {
     rolls.push(die.roll());
   }
 
@@ -172,9 +175,10 @@ function Die() {
 
   this.multipleRolls = function(numRolls) {
     var rolls = [];
+    var index = 0;
 
-    for (var i = 0; i < numRolls; i++) {
-      rolls.push(this.roll());
+    while (index < numRolls) {
+      rolls.push(die.roll());
     }
 
     return rolls;
