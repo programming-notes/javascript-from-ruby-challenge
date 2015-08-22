@@ -12,11 +12,13 @@ See if you can figure out how each works, and then tinker with it on your own in
 
 ```javascript
 // Array#each
-var each = function(array, func) {
-  for (var i=0; i < array.length; i++) {
+function each(array, func) {
+  var i;
+
+  for (i = 0; i < array.length; i++) {
 		func(array[i]);
 	}
-};
+}
 ```
 
 The `each()` function defined above takes two arguments: an array and a function.  `each()` then iterates through every element in the array and passes it to the function `func` (we can't use the word `function` for a parameter since it is a reserved word).
@@ -44,15 +46,16 @@ each(bugs, function(x) { console.log(x); });
 Ruby's `Array#map` method will pass each element in an array to a block, and then return a new array of the modified elements.  Here is how we can accomplish this in JavaScript:
 
 ```javascript
-var map = function(array, func) {
-  var results = [];
+function map(array, func) {
+  var results, index, count;
+  results = [];
 
-  for (var i=0; i < array.length; i++) {
-    results.push(func(array[i]));
+  for (index = 0, count = array.length; index < count; index++) {
+    results.push(func(array[index]));
   }
 
   return results;
-};
+}
 ```
 
 Using `map()` would then look something like this:
@@ -62,7 +65,7 @@ Using `map()` would then look something like this:
 var nums = [5,12,2,81,30];
 
 // Function to use:
-var timesTwo = function(x) { return x * 2 };
+function timesTwo(x) { return x * 2 }
 
 var numsTimesTwo = map(nums, timesTwo);
 numsTimesTwo; // => [10, 24, 4, 162, 60]
@@ -75,17 +78,19 @@ Note the use of the `return` keyword in the argument function.  If left out, eve
 `select` is similar to `map` except that we use the callback function to provide a truthy or falsey value for the conditional statement.
 
 ```javascript
-var select = function(array, func) {
-  var results = [];
+function select(array, func) {
+  var results, index, count, element;
+  results = [];
 
-  for (var i=0; i < array.length; i++) {
-    if (func(array[i])) {
-      results.push(array[i]);
+  for (index = 0, count = array.length; index < count; index++) {
+    element = array[index];
+    if (func(element)) {
+      results.push(element);
     }
   }
 
   return results;
-};
+}
 ```
 
 Try using select on the following arrays to filter out unwanted values:
@@ -109,12 +114,14 @@ var grid = [ [0,1,0,0],
 Finally, `Array#max`: the simplest of the four.  No need to pass a callback function, since all we are doing is returning the largest number.
 
 ```javascript
-var max = function(array) {
+function max(array) {
   var biggest = array[0];
+  var index, count, element;
 
-  for (var i=0; i < array.length; i++) {
-    if (array[i] > biggest) {
-      biggest = array[i];
+  for (index = 0, count = array.length; index < count; index++) {
+    element = array[index];
+    if (element > biggest) {
+      biggest = element;
     }
   }
 

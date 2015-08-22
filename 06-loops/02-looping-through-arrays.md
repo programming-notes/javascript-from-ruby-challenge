@@ -19,7 +19,9 @@ console.log(dogs[4]);
 But that is pretty bulky and ugly. We can use a `for` loop to do the same thing, but in less code:
 
 ```javascript
-for (var i = 0; i < dogs.length; i++) {
+var i;
+
+for (i = 0; i < dogs.length; i++) {
   console.log(dogs[i]);
 }
 ```
@@ -41,9 +43,10 @@ As an example, let's say that we want to sort an array of integers into two arra
 var integers = [3,8,1,6,2,0,5,7];
 var odds     = [];
 var evens    = [];
+var n;
 
 // Then define the loop
-for (var n = 0; n < integers.length; n++) {
+for (n = 0; n < integers.length; n++) {
   if (integers[n] % 2 === 0) {
     evens.push(integers[n]);
   } else {
@@ -66,6 +69,7 @@ Instead of writing `for` with a series of statements outlining the parameters of
 
 ```javascript
 var nums = [6,0,1,9,3];
+var i;
 
 for (i in nums) {
   console.log(i);

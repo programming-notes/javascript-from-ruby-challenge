@@ -43,7 +43,9 @@ A `for` loop, as mentioned above, is useful for looping with a given number of i
 The common and fundamental syntax for a `for` loop in JavaScript is as follows:
 
 ```javascript
-for (var i = 0; i < n; i++) {
+var i;
+
+for (i = 0; i < n; i++) {
   // block of code
 }
 ```
@@ -61,7 +63,9 @@ In this way the control flow of the loop is established.
 Note that the variables defined in the above example are just examples. This code is effectively the same:
 
 ```javascript
-for (var foo = 0; foo < bar; foo++) {
+var foo;
+
+for (foo = 0; foo < bar; foo++) {
   // block of code
 }
 ```
@@ -69,13 +73,14 @@ for (var foo = 0; foo < bar; foo++) {
 You don't always have to count up from zero, either. All of the following loops are valid. Can you figure out how they work? Use the browser console to try it out.
 
 ```javascript
-for (var i = 10; i > 0; i--) {
+var i, x;
+
+for (i = 10; i > 0; i--) {
   console.log(i);
 }
 console.log("Happy New Year!!");
 
-
-for (var x = 100; (x / 1000) <= 1; x += 100) {
+for (x = 100; (x / 1000) <= 1; x += 100) {
   console.log(x);
 }
 ```
