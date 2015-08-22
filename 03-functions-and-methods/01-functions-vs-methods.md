@@ -28,7 +28,7 @@ If we deconstruct the above example, we can pull it out into three parts:
 2. `toUpperCase` is a property of the `String` object. When we reference this property, it returns a function.
 3. `()` means _execute this function_.
 
-Let's make one thing very clear: **JavaScript does not have methods in the same way that Ruby has methods**. Instead, JavaScript has [first-class functions](http://en.wikipedia.org/wiki/First-class_function) which means that you can assign funtions to variables and object properties. In practice, this looks and works in a similar manner to how methods work in Ruby (and many other object-oriented languages, for that matter). In JavaScript, a method is merely a function that is assigned to the property of an object.
+Let's make one thing very clear: **JavaScript does not have methods in the same way that Ruby has methods**. Instead, JavaScript has [first-class functions](http://en.wikipedia.org/wiki/First-class_function) which means that you can assign functions to variables and object properties. In practice, this looks and works in a similar manner to how methods work in Ruby (and many other object-oriented languages, for that matter). In JavaScript, a method is merely a function that is assigned to the property of an object.
 
 JavaScript defines methods for its core global objects (`String`, `Array`, `Object`, etc.) which we can use on any objects of that type. In a browser environment, there are a vast number of other methods JavaScript provides for working with objects like `document`, `window`, `location`, and more.
 

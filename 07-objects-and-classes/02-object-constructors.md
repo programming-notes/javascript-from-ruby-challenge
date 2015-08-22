@@ -18,10 +18,21 @@ var Person = function(name) {
 
 That's it.  Now we have a constructor, and can write code like `var pete = new Person("Pete Townshend");` to give us a new `Person` object.
 
-This is a very simple constructor that only provides new objects with a single property `name`.  If we wanted to add more properties, we could just add more `this` statements to the function definition.  `this` is a keyword that stands for "the current object".
+In JavaScript, functions can also be declared using the following approach:
 
 ```javascript
-var Person = function(name) {
+function Person(name) {
+  this.name = name;
+}
+```
+
+For all intents and purposes, declaring the `Person` constructor this way achieves the same effect as in the previous example. _Out in the wild_, it's extremely common to see constructors declared in his fashion, so it's very important to be comfortable with this approach as well.  For the rest of our discussion, we will be using this approach for declaring constructors.
+
+
+We will extend the constructor to set a `species` property as well.  We simply add another `this` statement to the function definition.  In a constructor, `this` is a keyword that stands for "the newly instantiated object".
+
+```javascript
+function Person(name) {
   this.name = name;
   this.species = "homo sapiens";
 }
@@ -74,13 +85,13 @@ end
 Defining a `Die` constructor function in JavaScript:
 
 ```javascript
-var Die = function() {
+function Die() {
   this.roll = function() {
     // Math.random() generates a float, so we use
     // Math.floor() to round down to the nearest integer
-    return Math.floor(1 + Math.random()*6);
+    return Math.floor(1 + Math.random() * 6);
   };
-};
+}
 ```
 
 Run it in Ruby:
@@ -98,7 +109,7 @@ Run it in JavaScript:
 ```javascript
 var die = new Die();
 
-for (var i=0; i < 10; i++) {
+for (var i = 0; i < 10; i++) {
   console.log(die.roll());
 }
 ```
@@ -112,16 +123,16 @@ Let's dissect the definition of our `Die` object constructor.
 ```javascript
 // this says:
 // "We're defining a new constructor function called Die"
-var Die = function() {
+function Die() {
   // this says:
   // "we're defining a new property 'roll' for each object created
   // from Die() and assigning it to a function"
   this.roll = function() {
     // This returns a random integer from 1 to 6
     // so our Die always acts like a six-sided die
-    return Math.floor(1 + Math.random()*6);
+    return Math.floor(1 + Math.random() * 6);
   };
-};
+}
 
 ```
 
@@ -135,7 +146,7 @@ What if we wanted to collect the results of multiple rolls into an `Array`?  We 
 var multipleRolls = function(die, numRolls) {
   var rolls = [];
 
-  for (var i=0; i < numRolls; i++) {
+  for (var i = 0; i < numRolls; i++) {
     rolls.push(die.roll());
   }
 
@@ -154,15 +165,15 @@ This code is "inside out."  A `Die` object should know how to roll itself multip
 We do this by defining a new property for the `Die` constructor called `multipleRolls` and assign it to our function above.
 
 ```javascript
-var Die = function() {
+function Die() {
   this.roll = function() {
-    return Math.floor(1 + Math.random()*6);
+    return Math.floor(1 + Math.random() * 6);
   };
 
   this.multipleRolls = function(numRolls) {
     var rolls = [];
 
-    for (var i=0; i < numRolls; i++) {
+    for (var i = 0; i < numRolls; i++) {
       rolls.push(this.roll());
     }
 
