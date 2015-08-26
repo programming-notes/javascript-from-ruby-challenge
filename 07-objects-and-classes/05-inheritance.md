@@ -187,7 +187,7 @@ function Orchid(name, isEpiphyte) {
   this.isEpiphyte = isEpiphyte;
 }
 
-Orchid.prototype = Object.create(new Flower("Orchidaceae"));
+Orchid.prototype = Object.create(Flower.prototype);
 ```
 
 The `Flower` constructor is the same as it was before.  The `Orchid` constructor takes advantage of the `Object.create` method to set up a prototype relationship with `Flower` and add some additional properties of its own.  Let's analyze the `Orchid` constructor line by line:
