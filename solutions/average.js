@@ -53,12 +53,12 @@ Array.prototype.mean = function() {
 
 Array.prototype.median  = function() {
   var sorted = this.sort();
-  var isOddLength = (this.length % 2 === 1);
-  var halfLength = this.length / 2;
 
-  return isOddLength ?
-    sorted[Math.floor(halfLength)] :
-    (sorted[this.length/2 - 1] + sorted[this.length/2]) / 2;
+  if (this.length % 2 === 1) {
+    return sorted[Math.floor(this.length/2)]
+  } else {
+    return (sorted[this.length/2 - 1] + sorted[this.length/2]) / 2
+  }
 };
 
 Array.prototype.mode = function() {
