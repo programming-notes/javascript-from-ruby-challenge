@@ -60,15 +60,11 @@ Inheritance in JavaScript is a distinctly different animal.  We will cover the b
 First, let's replicate the `Flower` example above.  Here is the equivalent constructor function for the `Flower` class:
 
 ```javascript
-var Flower = function(commonName, latinName) {
-  // Assign the local variables
-  var commonName  = commonName;
-  var latinName   = latinName;
-
+function Flower(commonName, latinName) {
   // Define some getter methods
   this.getCommonName  = function() { return commonName };
   this.getLatinName   = function() { return latinName  };
-};
+}
 ```
 
 Copy the above code into your browser console so that you can create your own `Flower` objects.
@@ -81,7 +77,7 @@ tigerLily.getCommonName();
 tigerLily.getLatinName();
 ```
 
-Now we are faced with extending `Flower` to include a `region` attribute, which we will store as a local variable.  We need to define a new getter and setter function for `Flower`, but we want to do so in such a way that our already-created instance `tigerLily` has access to them.
+Now we are faced with extending `Flower` to include a `region` attribute, which we could store as a local variable.  We need to define a new getter and setter function for `Flower`, but we want to do so in such a way that our already-created instance `tigerLily` has access to them.
 
 In Ruby, we can open up a class and simply drop in more code for that class.  In JavaScript, we assign new properties to the object's `prototype`.  Let's start by creating the `region` property:
 
@@ -134,27 +130,25 @@ There is a great deal of debate as to which design pattern is the best, so inste
 Let's re-create the `Orchid < Flower` relationship above (with some enhancements) using JavaScript constructors to build a prototype chain:
 
 ```javascript
-var Flower = function(family) {
-  var family     = family;
+function Flower(family) {
   this.kingdom   = 'Plantae';
   this.division  = 'Angiospermae';
   this.getFamily = function() { return family };
-};
+}
 
-var Orchid = function(name, isEpiphyte) {
-  var name        = name;
+function Orchid(name, isEpiphyte) {
   this.isEpiphyte = isEpiphyte;
   this.getName    = function() { return name };
-};
+}
 
 Orchid.prototype = new Flower("Orchidaceae");
 ```
 
 So, what is going on here?  Well, we have two constructor functions: `Flower()`, which forms the base of our inheritance tree, and `Orchid()`.
 
-`Flower` takes one argument and stores it in a local variable `family`.  It also defines three properties, one of which is a getter method `getFamily`.
+`Flower` takes one argument and stores it in its parameter variable `family`.  It also defines three properties, one of which is a getter method `getFamily`.
 
-`Orchid` takes two methods, stores one in a local variable, and the other in a property.  It also defines a getter method to access the `name` variable.
+`Orchid` takes two arguments, storing one in its parameter variable, and the other in a property.  It also defines a getter method to access the `name` variable.
 
 The last statement is where the magic happens.  By assigning an instance of `Flower` to the prototype for `Orchid`, we have determined that any instances of `Orchid` will inherit the properties and methods of `Flower`:
 
@@ -181,45 +175,36 @@ If the property is not defined anywhere in the prototype chain, then JavaScript 
 ECMAScript 5, the latest release of JavaScript with [wide browser support](http://kangax.github.com/es5-compat-table/), defines the new `Object.create` method.  It's argument is an object to be used as a prototype.  It returns a new object whose prototype is the argument object.  If that sounds like gobbledigook, it's ok.  Perhaps seeing it in action will be more revelatory:
 
 ```javascript
-var Flower = function(family) {
-  var family     = family;
+function Flower(family) {
   this.kingdom   = 'Plantae';
   this.division  = 'Angiospermae';
   this.getFamily = function() { return family };
-};
+}
 
-var Orchid = function(name, isEpiphyte) {
-  var name = name;
+function Orchid(name, isEpiphyte) {
+  Flower.call(this, "Orchidaceae");
+  this.getName    = function() { return name };
+  this.isEpiphyte = isEpiphyte;
+}
 
-  var orchid        = Object.create(new Flower("Orchidaceae"));
-  orchid.getName    = function() { return name };
-  orchid.isEpiphyte = isEpiphyte;
-
-  return orchid;
-};
+Orchid.prototype = Object.create(Flower.prototype);
 ```
 
 The `Flower` constructor is the same as it was before.  The `Orchid` constructor takes advantage of the `Object.create` method to set up a prototype relationship with `Flower` and add some additional properties of its own.  Let's analyze the `Orchid` constructor line by line:
 
 ```javascript
-var Orchid = function(name, isEpiphyte) {
-  // Assign a local variable to the value of the name argument
-  var name = name;
+function Orchid(name, isEpiphyte) {
+  // Calls the parent constructor on the newly instantiated object
+  Flower.call(this, "Orchidaceae");
 
-  // Create a new object with an instance of Flower for
-  // its prototype object, and store it in a local variable
-  var orchid = Object.create(new Flower("Orchidaceae"));
+  // Define the method getName for the newly instantiated object
+  this.getName = function() { return name };
 
-  // Define the method getName for the orchid object
-  orchid.getName = function() { return name };
+  // Add the isEpiphyte property to the newly instantiated object
+  this.isEpiphyte = isEpiphyte;
 
-  // Add the isEpiphyte property to the orchid object
-  orchid.isEpiphyte = isEpiphyte;
-
-  // Return the orchid object as as the prototype
-  // object for new instances created with new Orchid()
-  return orchid;
-};
+  // The new operator implicitly returns the newly instantiated object
+}
 ```
 
 The result is roughly the same as with Constructor prototyping:

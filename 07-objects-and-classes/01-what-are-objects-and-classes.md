@@ -72,13 +72,13 @@ var peteTownshend = new Person("Pete Townshend");
 var johnEntwistle = new Person("John Entwistle");
 var keithMoon     = new Person("Keith Moon");
 
-var theWho = Band.new("The Who");
+var theWho = new Band("The Who");
 theWho.addMember(rogerDaltrey);
 theWho.addMember(peteTownshend);
 theWho.addMember(johnEntwistle);
 theWho.addMember(keithMoon);
 
-bestAlbum = Album.new("Who's Next");
+var bestAlbum = new Album("Who's Next");
 theWho.addAlbum(bestAlbum);
 ```
 

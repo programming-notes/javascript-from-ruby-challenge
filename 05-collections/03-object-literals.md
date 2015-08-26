@@ -75,6 +75,16 @@ book.title;
 
 In this way, we can extend objects with new properties whenever needed.  If we try to access a property that has not been defined yet, it will return `undefined`.  Nice and simple.
 
+It's important to realize the first example above could also have been written as follows:
+
+```javascript
+var person = {};
+person.firstName = 'Frank';
+person.lastName = 'Hardy';
+person.age = 25;
+```
+
+
 ### References
 
 [MDN: JS Guide: Object Literals](https://developer.mozilla.org/en/JavaScript/Guide/Values,_Variables,_and_Literals#Object_literals)<br>

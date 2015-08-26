@@ -39,23 +39,21 @@ Array.prototype.mode    = function() {
 */
 
 // begin:solution
-Array.prototype.total   = function() {
+Array.prototype.total = function() {
   var total = 0;
-  
-  for (var i=0; i < this.length; i++) {
-    total += this[i];
-  }
-  
+  this.forEach(function (element) {
+    total += element;
+  });
   return total;
 };
 
-Array.prototype.mean    = function() {
+Array.prototype.mean = function() {
   return this.total() / this.length;
 };
 
 Array.prototype.median  = function() {
   var sorted = this.sort();
-  
+
   if (this.length % 2 === 1) {
     return sorted[Math.floor(this.length/2)]
   } else {
@@ -63,31 +61,25 @@ Array.prototype.median  = function() {
   }
 };
 
-Array.prototype.mode    = function() {
-  var modes = {};
-  
-  for (var i=0; i < this.length; i++) {
-    if (modes.hasOwnProperty(this[i])) {
-      modes[this[i]] += 1;
-    } else {
-      modes[this[i]] = 1;
-    }
+Array.prototype.mode = function() {
+  var modes, max, number, count;
+
+  modes = {};
+  this.forEach(function (element) {
+    var count = modes[element] || 0;
+    modes[element] = count + 1;
+  });
+
+  max = 0;
+  for (number in modes) {
+    count = modes[number];
+    if (count > max) { max = count; }
   }
-  
-  var freqs = [];
-  
-  for (var n in modes) {
-    freqs.push(modes[n]);
+
+  for (number in modes) {
+    if (modes[number] < max) { delete modes[number]; }
   }
-  
-  var maxFreq = freqs.sort()[freqs.length - 1];
-  
-  for (var n in modes) {    
-    if (modes[n] < maxFreq) {
-      delete modes[n];
-    }
-  }
-  
+
   return modes;
 };
 // end:solution
@@ -96,58 +88,58 @@ Array.prototype.mode    = function() {
 describe("Array", function() {
   var array1 = [1, 2, 3, 4, 5, 5, 7];
   var array2 = [4, 4, 5, 5, 6, 6, 6, 7];
-  
+
   describe("total", function() {
     it("is defined", function() {
       expect(new Array().total).toBeDefined();
     });
-    
+
     it("returns the correct total of array 1", function() {
       expect(array1.total()).toBe(27);
     });
-    
+
     it("returns the correct total of array 2", function() {
       expect(array2.total()).toBe(43);
     });
   });
-  
+
   describe("mean", function() {
     it("is defined", function() {
       expect(new Array().mean).toBeDefined();
     });
-    
+
     it("returns the correct mean of array 1", function() {
       expect(array1.mean()).toBe(3.857142857142857);
     });
-    
+
     it("returns the correct mean of array 2", function() {
       expect(array2.mean()).toBe(5.375);
     });
   });
-  
+
   describe("median", function() {
     it("is defined", function() {
       expect(new Array().median).toBeDefined();
     });
-    
+
     it("returns the correct median of array 1", function() {
       expect(array1.median()).toBe(4);
     });
-    
+
     it("returns the correct median of array 2", function() {
       expect(array2.median()).toBe(5.5);
     });
   });
-  
+
   describe("mode", function() {
     it("is defined", function() {
       expect(new Array().mode).toBeDefined();
     });
-    
+
     it("returns the correct mode of array 1", function() {
       expect(array1.mode()).toEqual({5:2});
     });
-    
+
     it("returns the correct mode of array 2", function() {
       expect(array2.mode()).toEqual({6:3});
     });

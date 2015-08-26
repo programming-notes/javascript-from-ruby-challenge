@@ -43,7 +43,7 @@ Have fun!
 ### Loops
 - [Looping Basics](06-loops/01-looping-basics.md)
 - [Looping Through Arrays](06-loops/02-looping-through-arrays.md)
-- [Each, Map, Select, Max](06-loops/03-each-map-select-max.md)
+- [Array Enumeration Methods](06-loops/03-array-core-enumeration-methods.md)
 - [Exercises](../../../javascript-drills#loops)
 
 ### Objects and Classes

@@ -17,6 +17,17 @@ var foo = function(bar) { bar + 'baz'; };
 var name = function(parameter, parameter) { body; };
 ```
 
+These same functions could also be declared using the following approach:
+
+```javascript
+function foo(bar) { bar + 'baz'; }
+
+// Literally, the parts of the function:
+function name(parameter, parameter) { body; }
+```
+
+For all intents and purposes, declaring the functions `foo` and `name` this way achieves the same effect as in the previous example. _Out in the wild_, it's extremely common to see functions declared in his fashion, so it's very important to be comfortable with this approach as well.
+
 ### Invoking a Function
 
 In Ruby, methods can be invoked just by calling their name and parameters (either enclosed in parentheses or not), e.g. `puts('Hello world!')`. Invoking a function in JavaScript is similar, except that the parentheses are *required* even if the function does not take any parameters.
@@ -24,7 +35,7 @@ In Ruby, methods can be invoked just by calling their name and parameters (eithe
 Thus, invoking the function defined above would be written as `foo()`. Run this code in the browser console:
 
 ```javascript
-var sayHello = function() { 'hello'; };
+function sayHello() { 'hello'; }
 
 sayHello();
 ```
@@ -38,22 +49,22 @@ We know that methods in Ruby can take arguments as input and produce output.  Th
 In JavaScript, there is *no implicit return*. Returning a value from a function requires using the `return` keyword explicitly. In order to get the function `sayHello()` to give us the string `hello` when we invoke it, we would have to write it like this:
 
 ```javascript
-var sayHello = function() { return 'hello'; };
+function sayHello() { return 'hello'; }
 ```
 
 Any other code we put within the function body will be executed, but it will not be returned. The function below will return the sum of two numbers:
 
 ```javascript
-var add = function(x, y) { return x + y; };
+function add(x, y) { return x + y; }
 ```
 
 Though we could also add any other statements we want to the function body. Copy this code into the browser console:
 
 ```javascript
-var add = function(num1, num2) {
+function add(num1, num2) {
   var sum = num1 + num2;
   return sum;
-};
+}
 
 add(5,9);
 ```
@@ -75,9 +86,9 @@ Each parameter is actually a local variable that is only available within the bo
 When we call (invoke) a function, we pass arguments or values which are assigned to each parameter in the list. For example, consider the method definition:
 
 ```javascript
-var doSomething = function(firstName, num, age) {
+function doSomething(firstName, num, age) {
   return "You entered name: " + firstName + ", num: " + num + ", age: " + age;
-};
+}
 ```
 
 This method has three parameters, so we need three arguments to call the method.  Here are two examples of calling the method:

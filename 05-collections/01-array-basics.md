@@ -7,7 +7,7 @@ Arrays are the most fundamental kind of collection.  JavaScipt, like Ruby, allow
 Creating a new `Array` is easy.
 
 ```javascript
-var powersOfTen = [1,10,100]
+var powersOfTen = [1, 10, 100]
 ```
 
 `powersOfTen`, a variable, now holds the array `[1,10,100]` as its value.  The first element is `1`, the second is `10`, and the third is `100`.

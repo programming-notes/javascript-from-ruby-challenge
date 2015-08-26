@@ -15,13 +15,13 @@ All of the object properties we've defined have been public &mdash; they can be 
 To begin, let's rebuild our `Die` constructor again so we can create dice with any number of sides, not just six.
 
 ```javascript
-var Die = function(numSides) {
+function Die(numSides) {
   var sides = numSides;
 
   this.roll = function() {
     return Math.floor(1 + Math.random() * sides);
   };
-};
+}
 ```
 
 Take note of the `var sides` statement: we didn't use the `this` keyword here.  This means that `sides` is not a *property* of `Die`, but is rather an local variable for `Die` objects.  In Ruby, this is an *instance variable*.
@@ -74,9 +74,9 @@ Here is an example:
 ```javascript
 var foo = "goobers";
 
-var Bar = function() {
+function Bar() {
   var baz = "zoomzapzippy";
-};
+}
 
 console.log(foo); // => "goobers"
 console.log(Bar); // => function () {...}
@@ -96,7 +96,7 @@ Back to our `Die` constructor, now with commentary about the varaible scope:
 ```javascript
 // The parameter ~numSides~ allows the Die constructor
 // to accept the number of sides as an argument
-var Die = function(numSides) {
+function Die(numSides) {
 
   // ~sides~ is a local variable within the scope of the
   // Die constructor function that gets assigned to the
@@ -109,7 +109,7 @@ var Die = function(numSides) {
   this.roll = function() {
     return Math.floor(1 + Math.random() * sides);
   };
-};
+}
 
 // When we create a new Die object
 var tenDie = new Die(10);

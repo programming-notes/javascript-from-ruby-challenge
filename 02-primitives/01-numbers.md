@@ -15,7 +15,7 @@ Enter these into the browser console one line at a time to see how they work:
 ```javascript
 5
 4 + 2
-7.3/4
+7.3 / 4
 var myNum = 5;
 myNum + 5;
 typeof 3;
@@ -29,13 +29,13 @@ You may have noticed that if you use `/` with integers that are not evenly divis
 
 ```javascript
 // These will return the same values
-7/2
-4/3
-5/2
+7 / 2
+4 / 3
+5 / 2
 // …as these
-7.0/2
-4.0/3
-5.0/2.0
+7.0 / 2
+4.0 / 3
+5.0 / 2.0
 ```
 
 JavaScript also supports the modulus operator `%` which returns the remainder of a division operation.
