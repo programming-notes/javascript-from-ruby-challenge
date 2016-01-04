@@ -46,9 +46,7 @@ Try this out in the browser console for yourself.
 
 ### It's all in the .length
 
-We already know that JavaScript does not have an `each()` method to match Ruby's `Array#each`, but that doesn't mean that we can't perform the same function.  If you think about it, `each` is just a method that says "do something as many times as there are elements in this array".  In Ruby, it just does little extra work for us and passes each element to the block in turn. JavaScript is the same, except that we have to use array indexing to access the element each time.
-
-As an example, let's say that we want to sort an array of integers into two arrays: odds and evens.  In order to accomplish this, we have to iterate through each element in the source array, determine whether it is odd or even, and the shove it into the appropriate destination array.  We need a loop that will execute *as many times as there are elements in the array*.  Take a look at how we would write this, and try it out in the browser console:
+Let's suppose that we want to sort an array of integers into two arrays: odds and evens.  In order to accomplish this, we have to iterate through each element in the source array, determine whether it is odd or even, and the shove it into the appropriate destination array.  We need a loop that will execute *as many times as there are elements in the array*.  Take a look at how we would write this, and try it out in the browser console:
 
 ```javascript
 // First, we set up the source and destination arrays
