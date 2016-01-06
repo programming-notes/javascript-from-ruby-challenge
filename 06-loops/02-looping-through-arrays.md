@@ -46,9 +46,7 @@ Try this out in the browser console for yourself.
 
 ### It's all in the .length
 
-We already know that JavaScript does not have an `each()` method to match Ruby's `Array#each`, but that doesn't mean that we can't perform the same function.  If you think about it, `each` is just a method that says "do something as many times as there are elements in this array".  In Ruby, it just does little extra work for us and passes each element to the block in turn. JavaScript is the same, except that we have to use array indexing to access the element each time.
-
-As an example, let's say that we want to sort an array of integers into two arrays: odds and evens.  In order to accomplish this, we have to iterate through each element in the source array, determine whether it is odd or even, and the shove it into the appropriate destination array.  We need a loop that will execute *as many times as there are elements in the array*.  Take a look at how we would write this, and try it out in the browser console:
+Let's suppose that we want to sort an array of integers into two arrays: odds and evens.  In order to accomplish this, we have to iterate through each element in the source array, determine whether it is odd or even, and the shove it into the appropriate destination array.  We need a loop that will execute *as many times as there are elements in the array*.  Take a look at how we would write this, and try it out in the browser console:
 
 ```javascript
 // First, we set up the source and destination arrays
@@ -92,9 +90,17 @@ The `i` variable still acts as an incrementor, just like the longhand syntax (`f
 
 `for...in` is different from the above syntax in one very important sense: it will iterate through the elements of an enumerable object *in an arbitrary order*.  Do not use `for...in` if you are concerned with maintaining the sequential order of your array.
 
+### **STRETCH:** Missing Ruby's Enumerables
+
+One of the selling points of Ruby, in its early days, was its robust `Enumerable` method collection. In your time working with DBC, you may have grown exceedingly fond of these methods and might be missing them. They're really handy!
+
+Responding to desire for these methods to appear in JavaScript, JavaScript's `Array` has gained, among others, the methods `forEach`, `reduce`, and `filter`. While these methods offer much of the convenience of Ruby's `Enumerable`, there are a number of quirks to their use that may require further investigation on your part. Check out the examples provided at MDN and try to update the preceding code to take advantage of these methods. What might the trade-offs be? What's clearer? What's more opaque? Examine the [Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) documentation.
 
 ### References
 
 [MDN: JS Reference: for Statement](https://developer.mozilla.org/en/JavaScript/Reference/Statements/for)<br>
 [MDN: JS Reference: for ... in Statement](https://developer.mozilla.org/en/JavaScript/Reference/Statements/for...in)<br>
+[MDN: forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)  
+[MDN: reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)  
+[MDN: filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
 [Codecademy: Loops in JavaScript](http://www.codecademy.com/courses/loops)
