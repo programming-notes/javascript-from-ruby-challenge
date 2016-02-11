@@ -28,7 +28,7 @@ while (n <= 5) {
 }
 ```
 
-Before every iteration in a `while` loop, the conditional statement is evaluated. If it is `true`, the loop runs again. If it is `false`, the loop stops. In this case, the loop will run as long as the variable `n` is less than or equal to `5`. Capice? Good.
+Before every iteration in a `while` loop, the conditional statement is evaluated. If it is `true`, the loop runs again. If it is `false`, the loop stops. In this case, the loop will run as long as the variable `n` is less than or equal to `5`.
 
 There is one significant pitfall to watch out for: **infinite loops**. For example, what would happen if we wrote the above loop without the `n = n + 1;` statement?
 
