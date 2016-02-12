@@ -31,8 +31,8 @@ Here are some more examples of arrays:
 [10, "cats", 4.5, "piano"]
 
 // We can use variables in arrays, too.
-var dummy = "foobar";
-[1, 2, dummy] // => [1, 2, "foobar"]
+var favoriteFruit = "grapes";
+[1, 2, favoriteFruit] // => [1, 2, "grapes"]
 ```
 
 ### Reading from Arrays
