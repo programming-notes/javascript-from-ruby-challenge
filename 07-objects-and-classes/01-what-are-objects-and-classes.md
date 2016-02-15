@@ -31,7 +31,7 @@ country.flagColors; // => ["green", "blue", "white", "yellow"]
 We can also invoke the functions stored in the object using the same notation:
 
 ```javascript
-country.addCitizens(100,000);
+country.addCitizens(100000);
 // Now, let's check to be sure that the population did increase:
 country.population; // => 381931
 ```
