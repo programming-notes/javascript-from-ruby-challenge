@@ -12,31 +12,31 @@ We already looked at object literals, but here is a reminder of what they look l
 var country = {
   population: 281931,
   anthem: "We Are So Great",
-  taxRate: 20,
-  raiseTaxes: function(amount) {
-    this.taxRate += amount;
+  flagColors: ["green", "blue", "white", "yellow"],
+  addCitizens: function(number) {
+    this.population += number;
   }
 };
 ```
 
-Each of the words on the left of the colon (`population`, `taxRate`, etc.) are *properties* of the object `country`.  The first three properties store data (strings, arrays, numbers, other objects, etc.), while the last property `raiseTaxes` points to a function that changes the data stored in the object.
+Each of the words on the left of the colon (`population`, `addCitizens`, etc.) are *properties* of the object `country`.  The first three properties store data (strings, arrays, numbers, other objects, etc.), while the last property `addCitizens` points to a function that changes the data stored in the object.
 
 As in Ruby, an object's properties "travel along" with it wherever it goes.  After defining the object above, we can retrieve its data using dot notation:
 
 ```javascript
 country.population; // => 281931
-country.taxRate; // => 20
+country.flagColors; // => ["green", "blue", "white", "yellow"]
 ```
 
 We can also invoke the functions stored in the object using the same notation:
 
 ```javascript
-country.raiseTaxes(5);
-// Now, let's check to be sure that the taxRate did increase:
-country.taxRate; // => 25
+country.addCitizens(100000);
+// Now, let's check to be sure that the population did increase:
+country.population; // => 381931
 ```
 
-`raiseTaxes` is technically a property of the object `country`, but it is also a method, since it is a function that is defined within the object literal `country`.
+`addCitizens` is technically a property of the object `country`, but it is also a method, since it is a function that is defined within the object literal `country`.
 
 Our working definition of an object in JavaScript is thus: a bundle of data and functionality that lives in a program.
 
