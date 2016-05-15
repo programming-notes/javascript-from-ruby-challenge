@@ -151,6 +151,7 @@ var multipleRolls = function(die, numRolls) {
 
   while (index < numRolls) {
     rolls.push(die.roll());
+    index += 1;
   }
 
   return rolls;
@@ -179,6 +180,7 @@ function Die() {
 
     while (index < numRolls) {
       rolls.push(die.roll());
+      index += 1;
     }
 
     return rolls;
@@ -193,7 +195,7 @@ Any new `Die` objects will now include the `multipleRolls()` function and can ca
 var die = new Die();
 
 // Call the function multipleRolls() on the die object
-die.multipleRolls();
+die.multipleRolls(10);
 ```
 
 #### this??
