@@ -7,9 +7,9 @@ The files are organized into numbered chapters and pages. Move through them in
 order or jump around from place to place - whichever is better for you.
 
 Be sure to practice what you've learned by completing the drills (linked to at
-the end of each section). Clone the [javascipt-drils repo](../../../javascript-drills)
+the end of each section). Clone the [javascipt-drils repo](../../../javascript-drills-challenge)
 and follow along as you complete each section.  Be sure to read
-javascript-drills README. It includes instructions for running the drills
+javascript-drills-challenge README. It includes instructions for running the drills
 locally using Node.
 
 Have fun!
@@ -28,7 +28,7 @@ Have fun!
 - [Functions vs Methods](03-functions-and-methods/01-functions-vs-methods.md)
 - [Function Basics](03-functions-and-methods/02-function-basics.md)
 - [Built in Methods](03-functions-and-methods/03-built-in-methods.md)
-- [Exercises](../../../javascript-drills#functions)
+- [Exercises](../../../javascript-drills-challenge#functions)
 
 ### Branching
 - [Conditions and Logic](04-branching/01-conditions-and-logic.md)
@@ -38,13 +38,13 @@ Have fun!
 - [Array Basics](05-collections/01-array-basics.md)
 - [Array Operations](05-collections/02-array-operations.md)
 - [Object Literals](05-collections/03-object-literals.md)
-- [Exercises](../../../javascript-drills#collections)
+- [Exercises](../../../javascript-drills-challenge#collections)
 
 ### Loops
 - [Looping Basics](06-loops/01-looping-basics.md)
 - [Looping Through Arrays](06-loops/02-looping-through-arrays.md)
 - [Array Enumeration Methods](06-loops/03-array-core-enumeration-methods.md)
-- [Exercises](../../../javascript-drills#loops)
+- [Exercises](../../../javascript-drills-challenge#loops)
 
 ### Objects and Classes
 - [What Are Objects and Classes](07-objects-and-classes/01-what-are-objects-and-classes.md)
@@ -52,7 +52,7 @@ Have fun!
 - [Variables and Properties](07-objects-and-classes/03-variables-and-properties.md)
 - [Readers and Writers](07-objects-and-classes/04-readers-and-writers.md)
 - [Inheritance](07-objects-and-classes/05-inheritance.md)
-- [Exercises](../../../javascript-drills#objects--classes)
+- [Exercises](../../../javascript-drills-challenge#objects--classes)
 
 ---
 
